@@ -1,0 +1,37 @@
+@import url(../../styles/base.css);
+
+
+.outer-unchecked,
+.outer-checked,
+.inner {
+    flex-shrink: 0;
+    border-radius: 50%;
+    padding: 0;
+    margin: 0;
+}
+
+
+/* The outer circle of the checkbox */
+.outer-checked,
+.outer-unchecked
+{
+    width: 1.25em;
+    height: 1.25em;
+    margin: 20px;
+}
+.outer-checked {
+    border: 0.1em solid var(--primary-color);
+}
+.outer-unchecked {
+    border: 0.1em solid var(--secondary-color);
+}
+
+
+/* The inner circle of the checkbox, only appearing when check */
+.outer-checked .inner {
+    margin: auto;
+    width: 1em;
+    height: 1em;
+    transform: translateY(12%);             /* center inner circle in outer  */
+    background: var(--primary-color);
+}

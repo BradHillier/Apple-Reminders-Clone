@@ -1,0 +1,32 @@
+.flex-container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.flex-container .Button {
+    font-size: 0.2em;
+    border-bottom: 50px solid red;
+}
+
+.main-container {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 2px;
+}
+
+.no-scroll {
+    overflow: hidden;
+    -webkit-user-select: none;
+    user-select: none;
+    touch-action: none;
+}
+
+.options-container {
+    position: absolute;
+    height: 100%;
+    right: 0;
+    display: flex;
+    overflow: hidden;
+}

@@ -1,0 +1,29 @@
+/**
+ * iOS Dark Mode System Colours 
+ *
+ * Retrieved on December 18, 2023 from:
+ * https://developer.apple.com/design/human-interface-guidelines/color
+ */
+:root {
+    /* System Colours */
+    --iOS-red: rgba(255,69,58,255);
+    --iOS-orange: rgba(255,159,10,255);
+    --iOS-yellow: rgba(255,214,10,255);
+    --iOS-green: rgba(48,209,88,255);
+    --iOS-mint: rgba(99,230,226,255);
+    --iOS-teal: rgba(64,200,224,255);
+    --iOS-cyan: rgba(100,210,255,255);
+    --iOS-blue: rgba(10,132,255,255);
+    --iOS-indigo: rgba(94,92,230,255);
+    --iOS-purple: rgba(191,90,242,255);
+    --iOS-pink: rgba(255,55,95,255);
+    --iOS-brown: rgba(172,142,104,255);
+
+    /* System Gray Colours*/
+    --iOS-gray: rgba(142,142,147,255);
+    --iOS-gray1: rgba(99,99,102,255);
+    --iOS-gray2: rgba(72,72,74,255);
+    --iOS-gray3: rgba(58,58,60,255);
+    --iOS-gray4: rgba(44,44,46,255);
+    --iOS-gray5: rgba(28,28,30,255);
+}

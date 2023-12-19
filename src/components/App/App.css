@@ -1,0 +1,75 @@
+@import url(../../styles/base.css);
+
+
+html {
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    color: white;
+}
+
+body {
+  background: var(--bg-color);
+
+}
+
+.App {
+  text-align: center;
+  justify-content: center;
+  width: min(100%, 1000px);
+  margin: auto;
+}
+
+.heading {
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+}
+
+.heading h1 {
+    display: flex;
+    margin-left: 20px;
+    color: var(--primary-color);
+}
+
+.heading .btn-holder {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+.heading .flex-spacer {
+    display: flex;
+    flex-grow: 1;
+}
+
+.container {
+    display: block;
+}
+
+.heading .icon {
+    padding: 5px;
+    border-radius: 0.5em;
+    color: gray;
+    transform: scale(2);
+}
+
+.heading .icon:hover {
+    background: var(--secondary-color);
+}
+
+.heading .icon:active {
+    color: white;
+}
+
+.btn-bottom {
+    position: fixed;
+    bottom: 1.5em;
+    width: auto;
+}
+
+.btn-bottom * {
+    color: var(--primary-color);
+}
+
+.btn-bottom .icon {
+    transform: scale(1.5);
+}
+

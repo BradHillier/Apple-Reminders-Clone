@@ -1,0 +1,69 @@
+@import url(../../styles/base.css);
+
+
+.todo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: nowrap;
+    width: min(100%, 1000px);
+    height: 100%;
+    background: transparent;
+/*   
+ *   background: var(--primary-color);
+ *   border-radius: 10px;
+*/
+}
+
+button, span, input {
+    height: 100% !important;
+    margin: 0px;
+    line-height: 3.25em;
+    vertical-align: middle;
+    font-size: var(--font-size);
+    color: var(--fg-color);;
+    background: transparent;
+}
+
+button {
+    margin-right: 1em;
+    border: none;
+    background: none;
+}
+
+span, input[type="text"]{
+    width: auto;
+    overflow: hidden;
+}
+
+span {
+    border-bottom: 1px solid var(--secondary-color);
+}
+
+input[type="checkbox"] {
+    margin: 0px 2em 0px 2em;
+    transform: scale(1.5);
+    border: 0px;
+}
+
+input[type="text"] {
+    width: 100%;
+    outline: none;
+    border: none;
+    border-radius: 0px;
+    padding: 0px;
+    border-bottom: 1px solid var(--secondary-color);
+}
+
+.flag-icon {
+    display: flex;
+    height: 100%;
+    color: var(--iOS-orange);
+    border-bottom: 1px solid var(--secondary-color);
+}
+
+.flag-icon * {
+    display: flex;
+    margin: 1em;
+    margin-right: 1.5em;
+}
