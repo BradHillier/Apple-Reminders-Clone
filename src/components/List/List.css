@@ -29,4 +29,10 @@
     right: 0;
     display: flex;
     overflow: hidden;
+    text-align: left;
+}
+
+.options-container button {
+    text-align: left;
+    height: 100%;
 }

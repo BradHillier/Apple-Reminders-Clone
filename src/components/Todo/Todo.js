@@ -1,7 +1,7 @@
 import './Todo.css';
-import { useSelector, useDispatch } from 'react-redux';
-import { toggleComplete, updateText, stopEditing } from './todoSlice';
-import { Checkbox } from '../Checkbox/Checkbox'
+import { useDispatch } from 'react-redux';
+import { toggleComplete, updateText } from './todoSlice';
+import Checkbox from '../Checkbox/Checkbox'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFlag } from '@fortawesome/free-solid-svg-icons'
 
@@ -9,7 +9,7 @@ import { faFlag } from '@fortawesome/free-solid-svg-icons'
 function EditableText({ text, onKeyDown }) {
     return (
         <input autoFocus={true} type="text"
-            value={text} 
+            value={text}
             onChange={onKeyDown}
         />
     )
@@ -18,9 +18,9 @@ function EditableText({ text, onKeyDown }) {
 //    if (isSelected) {
 //        return (
 //            <input autoFocus={true} type="text"
-//                value={props.description} 
+//                value={props.description}
 //                onChange={event => dispatch(updateText({
-//                    id: props.id, 
+//                    id: props.id,
 //                    description: event.target.value
 //                }))}
 //                onKeyDown={event => dispatch(stopEditing(event.code))}
@@ -46,13 +46,13 @@ export function Todo(props) {
 
     return (
         <div className="todo" >
-            <Checkbox isChecked={props.isComplete} 
-                onToggle={() => dispatch(toggleComplete(props.id))} 
+            <Checkbox isChecked={props.isComplete}
+                onToggle={() => dispatch(toggleComplete(props.id))}
             />
             <EditableText text={props.description}
                 onKeyDown={keyDownHandler}
-            />  
-            { (props.isFlagged) ? 
+            />
+            { (props.isFlagged) ?
                 <div className="flag-icon">
                     <FontAwesomeIcon icon={faFlag} />
                 </div>
@@ -68,11 +68,11 @@ export function Button(props) {
             width: '100%',
             height: '100%',
             fontSize: '0.9em',
-            background: props.color
+            background: props.tint
         }}
             onClick={props.onClick}
         >
-            {props.desc}
+            {props.label}
         </button>
     )
 }

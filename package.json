@@ -13,6 +13,10 @@
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+    "@types/jest": "^29.5.11",
+    "@types/node": "^20.10.6",
+    "@types/react": "^18.2.46",
+    "@types/react-dom": "^18.2.18",
     "@use-gesture/react": "^10.3.0",
     "framer-motion": "^10.16.16",
     "react": "^18.2.0",
@@ -21,6 +25,7 @@
     "react-scripts": "^5.0.1",
     "redux": "^5.0.0",
     "redux-toolkit": "^1.1.2",
+    "typescript": "^5.3.3",
     "uuid": "^9.0.1",
     "web-vitals": "^2.1.4"
   },

@@ -1,12 +1,14 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faPlus, faCirclePlus } from '@fortawesome/free-solid-svg-icons'
+import { faCirclePlus } from '@fortawesome/free-solid-svg-icons'
 import { useTransition, animated } from '@react-spring/web'
+import { useSelector, useDispatch } from 'react-redux';
 
 import './App.css';
+import '../../styles/iOSSystemColors.css'
 import { Todo, Button } from '../Todo/Todo'
 import { create, remove, toggleFlagged } from '../Todo/todoSlice';
-import { SwipableOptions } from '../List/List'
-import { useSelector, useDispatch } from 'react-redux';
+import { SlidingListItem } from '../List/List'
+import { iOS_colors } from '../../iOSSystemColors'
 
 function App() {
     const todos = useSelector(state => state.todo.todos)
@@ -14,8 +16,8 @@ function App() {
 
     /* Save the state in local storage */
     // const all_todos = useSelector(state => state.todo.todos)
-    // window.localStorage.setItem('state', JSON.stringify(all_todos))
-
+    //  window.localStorage.setItem('state', JSON.stringify(all_todos))
+    //
 
     const transitions = useTransition(todos, {
         keys: (todo) => todo.id,
@@ -34,19 +36,39 @@ function App() {
     return (
         <div className="App">
             <div className="heading">
-                <h1 style={{display: 'inline-block'}}>Todo List</h1>
+                <h1 style={{display: 'inline-block'}}>
+                    Reminders
+                </h1>
             </div>
             <div className="container">
                  {transitions((style, todo) => (
+
                      <animated.div style={style} key={todo.id}>
-                        <SwipableOptions>
-                            <Todo {...todo} />
-                            <Button desc="Details" color="#48484A" />
-                            <Button desc="Flag" color="#FF9E0A"
-                                 onClick={() => dispatch(toggleFlagged(todo.id))} />
-                            <Button desc="Delete" color="#FF453A" 
-                                 onClick={() => dispatch(remove(todo.id))} />
-                        </SwipableOptions>
+
+                        <SlidingListItem
+                            mainContent={<Todo {...todo} />}
+                            swipeActions={{
+                                allowsFullSwipe: true,
+                                trailing: [
+                                    <Button 
+                                        label="Details" 
+                                        tint={iOS_colors.gray3}
+                                    />,
+                                    <Button 
+                                        onClick={() => dispatch(toggleFlagged(todo.id))}
+                                        label="Flag" 
+                                        tint={iOS_colors.orange}
+                                    />,
+                                    <Button 
+                                         onClick={() => dispatch(remove(todo.id))} 
+                                         label="Delete" 
+                                         tint={iOS_colors.red} 
+                                    />
+                                ],
+                                leading: [
+                                ]
+                            }}
+                         />
                      </animated.div>
                  ))}
             </div>
