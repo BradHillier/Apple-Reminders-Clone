@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/Apple-Reminders-Clone/static/css/main.0189b315.css",
-    "main.js": "/Apple-Reminders-Clone/static/js/main.c980fb4b.js",
+    "main.js": "/Apple-Reminders-Clone/static/js/main.3af15d4c.js",
     "index.html": "/Apple-Reminders-Clone/index.html",
     "main.0189b315.css.map": "/Apple-Reminders-Clone/static/css/main.0189b315.css.map",
-    "main.c980fb4b.js.map": "/Apple-Reminders-Clone/static/js/main.c980fb4b.js.map"
+    "main.3af15d4c.js.map": "/Apple-Reminders-Clone/static/js/main.3af15d4c.js.map"
   },
   "entrypoints": [
     "static/css/main.0189b315.css",
-    "static/js/main.c980fb4b.js"
+    "static/js/main.3af15d4c.js"
   ]
 }
