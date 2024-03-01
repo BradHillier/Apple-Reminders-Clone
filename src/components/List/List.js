@@ -90,8 +90,8 @@ export const SlidingListItem = ({
             x: -(openItemWidth * swipeActions.trailing.length),
             config: {
                mass: 2, 
-               friction: 50 - (velocity[0] * 10),
-               tension: 250,
+               friction: Math.max(50 - (velocity[0] * 10), 10),
+               tension: 300,
                clamp: false,
             }
         })
@@ -103,7 +103,7 @@ export const SlidingListItem = ({
            x: 0,
            config: {
                mass: 2, 
-               friction: 50 - (velocity[0] * 10),
+               friction: Math.max(50 - (velocity[0] * 10), 10),
                tension: 250,
                clamp: false
            }
